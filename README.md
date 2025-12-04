@@ -1,5 +1,5 @@
 
-[<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -62,7 +62,7 @@
 
     <!-- 3D Romantic Panda GIF -->
     <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYTJ4azdwd3RvNDV0NXozaXp4bzQ4dHkwZnJpMncwMTBzdGhyaW80ZyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/IzXiddo2twMmdmU8Lv/giphy.gif" alt="Cute Panda" class="panda">
-    <h1>A cutie was born today,<br>|....
+    <h1>A cutie was born today</h1><br>|....
          24 years ago!...|</br>
     </h1>
     <h2>yes its you my Amayi❤️</h2>
