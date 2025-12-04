@@ -1,5 +1,4 @@
-[index.html](https://github.com/user-attachments/files/23924805/index.html)# amayi-surprise
-a birthday surprise
+
 [<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -57,13 +56,14 @@ a birthday surprise
             transform: scale(1.1);
         }
     </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
     <!-- 3D Romantic Panda GIF -->
     <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYTJ4azdwd3RvNDV0NXozaXp4bzQ4dHkwZnJpMncwMTBzdGhyaW80ZyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/IzXiddo2twMmdmU8Lv/giphy.gif" alt="Cute Panda" class="panda">
-    <h1>A cutie was born today,<br>....
-         24 years ago!...</br>
+    <h1>A cutie was born today,<br>|....
+         24 years ago!...|</br>
     </h1>
     <h2>yes its you my Amayi❤️</h2>
     <h3>A little surprise awaits you.....</h3>
@@ -73,4 +73,4 @@ a birthday surprise
     </button>
 
 </body>
-</html>Uploading index.html…]()
+</html>
