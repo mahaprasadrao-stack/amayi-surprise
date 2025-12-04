@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Final Surprise 🎉</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background: linear-gradient(135deg, #6b0080, #1a0033);
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Poppins', sans-serif;
+      color: white;
+      overflow: hidden;
+    }
+
+    .surprise-card {
+      background: linear-gradient(135deg, rgba(107, 0, 128, 0.6), rgba(26, 0, 51, 0.8));
+      border: 3px solid #ff1493;
+      border-radius: 40px;
+      padding: 60px 50px;
+      max-width: 700px;
+      width: 90%;
+      text-align: center;
+      box-shadow: 0 0 40px rgba(255, 20, 147, 0.5);
+      backdrop-filter: blur(10px);
+    }
+
+    .panda-box {
+      margin-bottom: 30px;
+    }
+
+    .panda-img {
+      width: 180px;
+      height: auto;
+      filter: drop-shadow(0 0 15px rgba(255, 105, 180, 0.6));
+      animation: pandaFloat 3s ease-in-out infinite;
+    }
+
+    @keyframes pandaFloat {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+
+    .heart-emoji {
+      display: inline-block;
+      font-size: 32px;
+      margin: 0 10px;
+      animation: heartBeat 0.8s ease-in-out infinite;
+    }
+
+    @keyframes heartBeat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+
+    .love-text {
+      font-size: 32px;
+      font-weight: 600;
+      color: #ff69b4;
+      margin: 20px 0;
+      text-shadow: 0 0 10px rgba(255, 105, 180, 0.8);
+    }
+
+    .birthday-message {
+      font-size: 20px;
+      line-height: 1.8;
+      color: white;
+      margin: 30px 0;
+      font-style: italic;
+      text-shadow: 0 0 8px rgba(255, 20, 147, 0.4);
+    }
+
+    .replay-btn {
+      background: linear-gradient(135deg, #ff1493, #ff69b4);
+      border: none;
+      color: white;
+      padding: 16px 50px;
+      font-size: 20px;
+      font-weight: 700;
+      border-radius: 50px;
+      cursor: pointer;
+      margin-top: 30px;
+      box-shadow: 0 0 25px rgba(255, 20, 147, 0.6);
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .replay-btn:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 35px rgba(255, 20, 147, 0.8);
+    }
+
+    .emoji-rain {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .confetti {
+      position: absolute;
+      font-size: 32px;
+      animation: fall 4s linear forwards;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    .surprise-card {
+      position: relative;
+      z-index: 10;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="emoji-rain" id="emojiRain"></div>
+
+  <div class="surprise-card">
+    <!-- Panda in Box -->
+    <div class="panda-box">
+      <img src="images/panda.png" alt="Panda in box" class="panda-img">
+    </div>
+
+    <!-- Love Text -->
+    <div class="love-text">
+      Lots of love for you <span class="heart-emoji">❤️</span>
+    </div>
+
+    <!-- Birthday Message -->
+    <div class="birthday-message">
+      Once again, Happy Birthday! Hope you loved  it...
+      keep smile that suits on you 
+    </div>
+
+    <!-- Replay Button -->
+    <button class="replay-btn" onclick="location.href='index.html'">
+      ↻ Replay
+    </button>
+  </div>
+
+  <audio autoplay loop>
+    <source src="music/2bgm.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    // Emoji confetti effect
+    const emojiRain = document.getElementById('emojiRain');
+    const emojis = ['💖', '✨', '🌟', '💝', '🎉', '🎁', '💕', '🌸'];
+
+    function createConfetti() {
+      const confetti = document.createElement('div');
+      confetti.className = 'confetti';
+      confetti.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+      confetti.style.left = Math.random() * 100 + '%';
+      confetti.style.animationDuration = (3 + Math.random() * 2) + 's';
+      
+      emojiRain.appendChild(confetti);
+      
+      setTimeout(() => confetti.remove(), 5000);
+    }
+
+    setInterval(createConfetti, 150);
+  </script>
+
+</body>
+</html>

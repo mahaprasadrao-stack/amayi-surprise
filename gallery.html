@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Our Memories 💞</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="gallery-bg">
+
+<div id="heart-container"></div>
+
+<audio id="bgMusic" src="music/bgm.mp3" autoplay loop></audio>
+
+<div class="slideshow-container">
+
+    <img id="slide" src="images/img1.jpg" class="slide-img">
+     <!-- Panda Under Photo -->
+    <img class="panda-small" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExejR2anhkcmVydTg4M252czlmd25sMWs3YWMybTlkajY0a3RkNWYwZyZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/ZQzAUHLBrjcc75KcIJ/giphy.gif" alt="panda">
+
+    
+
+    <a href="messages.html">
+  <button class="end-btn">Open My Message 💌</button>
+</a>
+
+</div>
+
+<script>
+let images = [
+    "images/img1.jpg",
+    "images/img2.jpg",
+    "images/img3.jpg",
+    "images/img4.jpg",
+    "images/img5.jpg",
+    "images/img6.jpg",
+    "images/img7.jpg",
+    "images/img8.jpg",
+    "images/img9.jpg",
+
+];
+
+let i = 0;
+let slide = document.getElementById("slide");
+
+setInterval(() => {
+    i++;
+    if(i >= images.length) i = 0;
+    slide.src = images[i];
+}, 3000);
+
+
+
+</SCRIPT>
+
+
+
+
+
+   
+
+</div>
+</div>
+
+<script>
+
+
+/* SLIDESHOW (keep your existing logic above this if you already have it) */
+
+// 💗 FULL SCREEN HEART RAIN
+const heartContainer = document.getElementById("heart-container");
+
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "💖";
+
+    heart.style.left = Math.random() * window.innerWidth + "px";
+    heart.style.fontSize = (16 + Math.random() * 24) + "px";
+    heart.style.animationDuration = (3 + Math.random() * 5) + "s";
+    heart.style.opacity = Math.random();
+
+    heartContainer.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 8000);
+}
+
+setInterval(createHeart, 180);
+
+</script>
+</script>
+<script src="script.js"></script>
+</body>
+</html>

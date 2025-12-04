@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>One Last Thing</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body{
+      background: radial-gradient(circle at top, #220015, #000);
+      height: 100vh;
+      margin: 0;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Poppins', sans-serif;
+      color: white;
+      flex-direction: column;
+    }
+
+    /* BANNER */
+    .banner{
+      position: absolute;
+      top: 20px;
+      width: 100%;
+      text-align: center;
+    }
+    .flag{
+      display: inline-block;
+      width: 18px;
+      height: 28px;
+      margin: 0 2px;
+      clip-path: polygon(0 0,100% 0,50% 100%);
+    }
+
+    .c1{background:#ff4d4d;}
+    .c2{background:#ffcc00;}
+    .c3{background:#4dff4d;}
+    .c4{background:#4dd2ff;}
+    .c5{background:#b84dff;}
+
+    h2{
+      margin-top: 120px;
+      color: #ff8ad4;
+      font-weight: 500;
+      letter-spacing: 2px;
+    }
+
+    .gift-box{
+      margin-top: 30px;
+      width: 180px;
+      animation: bounce 2s infinite;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .gift-box:hover {
+      transform: scale(1.1);
+    }
+
+    @keyframes bounce{
+      0%,100%{transform: translateY(0);}
+      50%{transform: translateY(-15px);}
+    }
+
+    .tap-text{
+      color: #ccc;
+      margin-top: 10px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- FLAGS -->
+  <div class="banner">
+    <span class="flag c1"></span>
+    <span class="flag c2"></span>
+    <span class="flag c3"></span>
+    <span class="flag c4"></span>
+    <span class="flag c5"></span>
+    <span class="flag c1"></span>
+    <span class="flag c2"></span>
+    <span class="flag c3"></span>
+    <span class="flag c4"></span>
+    <span class="flag c5"></span>
+  </div>
+
+  <h2>One Last Thing...</h2>
+
+  <!-- GIFT -->
+  <img src="images/gift.png" class="gift-box" onclick="openGift()">
+
+  <div class="tap-text">Tap the gift</div>
+
+  <!-- MUSIC OPTIONAL -->
+  <audio autoplay loop>
+    <source src="music/bgmj.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+  <script>
+    function openGift(){
+      console.log("Gift clicked!");
+      window.location.href = "surprise.html";
+    }
+  </script>
+
+</body>
+</html>
